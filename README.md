@@ -15,6 +15,13 @@ TravelGo is built using the following technologies:
 
 - <img src="https://i.ibb.co/XV2gDMr/logo-2582747-1280.png" alt="CSS Logo" width="40"> *CSS3*: The style sheet language used for describing the presentation of the web page.
 
+
+## Video Demo
+![Video Demo](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGQ1Z2RlZzdueWppcWVsZTZramp1aDJqdHhhN2E1cmtlaGNmY3d3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cux5E9sXMm9aKlZavU/giphy.gif)
+
+## Live Page
+[![TravelGo](https://img.shields.io/badge/TravelGo-Click_Here-brightgreen)](https://nidhieeeee.github.io/TravelGo)
+
 ## Screenshots
 
 Here are some screenshots of the TravelGo web page:
@@ -27,6 +34,7 @@ Here are some screenshots of the TravelGo web page:
 
 #### About Page
 ![Screenshot 3](https://i.postimg.cc/sXR2hTSK/Screenshot-2024-06-14-234617-1.png)
+
 
 
 
