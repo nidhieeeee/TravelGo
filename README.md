@@ -1,5 +1,4 @@
 # TravelGo
-# TravelGo
 
 Welcome to TravelGo, your ultimate travel companion! This project is a simple traveling site page designed using HTML and CSS.
 
