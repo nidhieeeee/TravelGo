@@ -124,7 +124,13 @@ background-color: rgb(34, 34, 90);
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
-
+.hacp ul li a{
+    text-decoration: none;
+    color: black;
+}
+.hacp ul li a:hover{
+color: blue;
+}
 .header{
     display: flex;
     align-items: center;
@@ -228,8 +234,9 @@ font-weight: 600;
 }
 .footer{
     background-color:rgb(119, 116, 116) ;
-    margin: 0px;
+    margin-bottom: 0px;
     box-sizing: border-box;
+   
 }
 .last{
     display: flex;
@@ -238,7 +245,7 @@ font-weight: 600;
     margin-top: 35px;
     font-size: 0.8rem;
     color: white;
-    
+     gap:20px;
 }
 .year{
     margin-left: auto;
