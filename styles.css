@@ -253,3 +253,10 @@ font-weight: 600;
 .term{
     margin-right: auto;
 }
+.a ul li a{
+    text-decoration: none;
+    color: white;
+}
+.a ul li a:hover{
+color: blue;
+}
