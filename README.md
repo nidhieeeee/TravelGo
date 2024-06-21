@@ -33,13 +33,10 @@ Here are some screenshots of the TravelGo web page:
 ![Screenshot 2](https://i.postimg.cc/8kx131t9/Screenshot-2024-06-15-001012.png)
 
 #### About Page
-![Screenshot 3](https://i.postimg.cc/sXR2hTSK/Screenshot-2024-06-14-234617-1.png)
-
-#### About Page
-![Screenshot 4](https://i.ibb.co/Zd0t8Hs/Screenshot-2024-06-21-232056.png)
+![Screenshot 3](https://i.ibb.co/Zd0t8Hs/Screenshot-2024-06-21-232056.png)
 
 #### Contact Us Page
-![Screenshot 5](https://i.ibb.co/4jKzLpd/Screenshot-2024-06-21-232252.png)
+![Screenshot 4](https://i.ibb.co/4jKzLpd/Screenshot-2024-06-21-232252.png)
 
 
 
