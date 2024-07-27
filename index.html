@@ -15,7 +15,7 @@
         </div>
 
 
-        <div class="hacp">
+        <div class="hacp" id="navbar-menu">
             <ul>
                 <li>HOME</li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -325,5 +325,14 @@
     </div>
     
 </div>
+    <script>
+    document.getElementById('hamburger').addEventListener('click', ()=>{
+      var menu=document.getElementById('navbar-menu').querySelector('ul');
+      menu.classList.toggle('active');
+      var hamburger=document.getElementById('hamburger');
+      hamburger.classList.toggle('active');
+      
+    })
+</script>
 </body>
 </html>
