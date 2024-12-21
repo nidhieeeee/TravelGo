@@ -1,34 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'rubik',sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.hacp ul li a{
+
+.hacp ul li a {
     text-decoration: none;
     color: black;
 }
-.hacp ul li a:hover{
-color: blue;
+
+.hacp ul li a:hover {
+    color: blue;
 }
 
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     padding-left: 10px;
-    
+
 }
 
-.hacp{
+.hacp {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
 
-.button{
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,30 +41,33 @@ color: blue;
     margin: 5px;
 }
 
-.header header{
+.header header {
     font-weight: bold;
     font-size: 2rem;
-    
 
-    
+
+
 }
-.hacp li{
+
+.hacp li {
     list-style: none;
     display: inline-block;
     justify-content: space-between;
     margin: 8px;
-    
+
 }
-.navbar{
+
+.navbar {
     margin-top: 0;
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
-   box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
-   background-color: white;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
+    background-color: white;
 }
-#get{
+
+#get {
     background-color: blue;
     padding: 10px 5px 10px 5px;
     color: white;
@@ -70,80 +76,174 @@ color: blue;
     border: none;
     margin: 5px;
 }
-#sign{
+
+#sign {
     background-color: white;
     border: none;
     font-weight: 600;
-    padding: 10px 5px 10px 5px ;
-    
-    
-}
-#sign:hover{
-background-color: blue;
-color: white;
-padding: 10px 5px 10px 5px ;
-border-radius: 5px;
-transition: trasnform 0.5s ease-in,
-    background-color 0.5s ease-in;
+    padding: 10px 5px 10px 5px;
+
 
 }
-body{
+
+#sign:hover {
+    background-color: blue;
+    color: white;
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+    transition: trasnform 0.5s ease-in,
+        background-color 0.5s ease-in;
+
+}
+
+body {
     background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
+
 .tit {
     font-size: 2rem;
-    font-weight:bolder;
-    
-    
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
 }
-.img img{
+
+.underline {
+    width: 100%;
+    border: 2px solid black;
+}
+
+.img img {
     width: 190px;
-    height: 270px;
+    height: 300px;
     border-radius: 5%;
-    
-    margin-top: 45px;
+    margin-top: 25px;
 }
-.img{
-    padding-left: 0;
-    margin-left: 0;
-}
-.main{
-    
-    padding:20px;
+
+.main1 {
+    padding: 20px;
     width: 700px;
-    margin-top: 100px;
+    margin-top: 80px;
     border-radius: 5%;
     background-color: white;
+    box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 4px 4px rgba(0,0,0,0.2) ;
     
 }
+
 .icon1 {
-    
+    margin-top: 20px;
+    font-size: 1.2rem;
     display: flex;
     justify-content: left;
     align-items: center;
 }
-#icon{
-    width:70px;
+
+#icon {
+    width: 70px;
     height: 70px;
 }
-.des{
-    border-top: 3px solid black;
-    padding-top: 10px;
+
+.des {
     width: 90%;
-    
+
 }
-.des p a{
+
+.des p a {
     color: black;
-}
-.a{
     text-decoration: none;
-    
+}
+
+.des p {
+    margin-top: 20px;
+}
+
+.a {
+    text-decoration: none;
+
+}
+
+.line {
+    height: 2px;
+    width: 20px;
+    background-color: black;
+    border: 2px solid black;
+    transition: all 0.5s ease;
+}
+
+.hamburger {
+    height: 25px;
+    width: 50px;
+    margin-top: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg);
+
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media(max-width:768px) {
+    body {
+        margin-bottom: 20px;
+    }
+
+    .hacp ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: aliceblue;
+        box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 200px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .button1 {
+        display: none;
+    }
+
+    .hacp ul.active {
+        display: flex;
+    }
+
+    .main1 {
+        margin-top: 30px;
+        width: 95%; 
+    }
+    .main{
+        flex-wrap: wrap;
+    }
+
+    .img img {
+        height: 200px;
+    }
+
 }
