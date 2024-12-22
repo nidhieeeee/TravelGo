@@ -89,19 +89,17 @@ background-color 0.5s ease-in;
 margin: 10px;
 }
 #purchase:hover{
-
-/* padding: 8px 12px 8px 12px; */
 font-size: 1rem;
 border-radius: 5px;
 transform: scale(1.1);
 margin: 5px;
 }
+
 #purchase:active{
 transform: scale(0.8);
 background-color: rgb(34, 34, 90);
-
-
 }
+
 .tit{
     display: flex;
     justify-content: space-between;
@@ -160,9 +158,6 @@ color: blue;
 .header header{
     font-weight: bold;
     font-size: 2rem;
-    
-
-    
 }
 .hacp li{
     list-style: none;
@@ -213,30 +208,21 @@ transition: trasnform 0.5s ease-in,
     list-style: none;
 }
 .info{
-    
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    margin: 0px 20px 0px 20px;
 }
 .a ul, .b ul, .c ul{
     color: white;
 font-weight: 600;
 }
-.a{
+.a,.b,.c{
     margin-top: 20px;
-    margin-left: 200px;
-}
-.b{
-    margin-top: 20px;
-}
-.c{
-    margin-top: 20px;
-    margin-right: 200px;
 }
 .footer{
     background-color:rgb(119, 116, 116) ;
     margin-bottom: 0px;
-    box-sizing: border-box;
-   
 }
 .last{
     display: flex;
