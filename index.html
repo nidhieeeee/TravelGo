@@ -4,43 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelGo Website</title>
+    <title>TravelGo — Explore Luxury Destinations & Holiday Packages</title>
+    <meta name="description" content="Discover premium vacation packages, tailor-made itineraries, and unforgettable holiday experiences around the world with TravelGo.">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
         <div class="header">
             <header>TravelGo</header>
         </div>
 
-
         <div class="hacp" id="navbar-menu">
             <ul>
-                <li>HOME</li>
+                <li><a href="index.html" style="color: var(--accent-blue);">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="form.html">CONTACT US</a></li>
-                <li>PRICING</li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙 <span>Dark Mode</span></button></li>
             </ul>
         </div>
 
         <div class="button">
-            <input type="button" id="get" value="Get Started">
+            <input type="button" id="get" value="Custom Plan">
             <input type="button" id="sign" value="SIGN IN">
         </div>
-<div class="hamburger" id="hamburger">
+
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
+    </nav>
 
-    </div>
-    <div class="main">
-        <div class="main-box">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Discover Your Next <span style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dream Adventure</span></h1>
+        <p class="hero-subtitle">Curated premium holiday escapes, exclusive stays, and immersive guided tours tailored for the modern explorer.</p>
+        
+        <!-- Live Search, Filter & Sort Bar -->
+        <div class="search-filter-bar">
+            <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="Search destinations (e.g. Bali, Mountains, Beach)...">
+            </div>
+
+            <div class="filter-pills">
+                <button class="filter-btn active" data-filter="all">All Packages</button>
+                <button class="filter-btn" data-filter="beaches">🏖️ Beaches</button>
+                <button class="filter-btn" data-filter="mountains">⛰️ Mountains</button>
+                <button class="filter-btn" data-filter="city">🏙️ City & Luxury</button>
+                <button class="filter-btn" data-filter="family">🎡 Family & Fun</button>
+            </div>
+
+            <select id="sort-select" aria-label="Sort packages">
+                <option value="default">Sort: Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="seats">Available Seats</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Main Destination Cards Grid -->
+    <main class="main">
+        <!-- Kullu Manali -->
+        <div class="main-box" data-category="mountains" data-price="50000" data-seats="60">
             <div class="img">
-                <img id="img1"
-                    src="https://discoverkullumanali.in/wp-content/uploads/2019/01/Manali-sign-like-hollywood-sign-in-Manali-discover-kullu-manali-www.discoverkullumanali.in_-1-1140x530.jpg"
-                    alt="manali">
+                <img id="img1" src="/images/kullumanali.jpg" alt="Kullu Manali Mountains">
+                <div class="card-badge">Popular Choice</div>
             </div>
             <div class="tit">
                 <span>Kullu Manali</span>
@@ -50,29 +82,22 @@
                 <p>50,000 ₹</p>
             </div>
             <div class="des">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet debitis illo et provident,
-                    fuga
-                    in, quia voluptate cum suscipit quas eos ipsum.</p>
+                <p>Experience snow-capped Himalayan peaks, enchanting pine forests, and thrilling river rafting adventures in the heart of Himachal Pradesh.</p>
             </div>
             <div class="ava">
-                <p>Available Seat -60</p>
+                <p>⚡ Available Seats: 60</p>
             </div>
             <div class="pur">
                 <input type="button" id="purchase" value="Purchase">
-                <input type="button" id="close" value="Close">
-
+                <input type="button" id="close" value="Dismiss">
             </div>
-
         </div>
 
-
-
-
-        <div class="main-box">
+        <!-- Goa -->
+        <div class="main-box" data-category="beaches" data-price="60000" data-seats="4">
             <div class="img">
-                <img id="img1"
-                    src="https://t3.ftcdn.net/jpg/01/40/51/56/360_F_140515612_0MMpqpsIvs6xno5YXmPVy9FUmZ4uLnFB.jpg"
-                    alt="goa">
+                <img id="img1" src="/images/goa.jpg" alt="Goa Beach Sunset">
+                <div class="card-badge" style="background: rgba(239,68,68,0.15); color: #ef4444;">🔥 Only 4 Left</div>
             </div>
             <div class="tit">
                 <span>Goa</span>
@@ -82,31 +107,22 @@
                 <p>60,000 ₹</p>
             </div>
             <div class="des">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet debitis illo et provident,
-                    fuga
-                    in, quia voluptate cum suscipit quas eos ipsum.</p>
+                <p>Discover pristine sun-kissed beaches, Portuguese colonial architecture, vibrant nightlife, and mouthwatering seafood delicacies.</p>
             </div>
             <div class="ava">
-                <p>Available Seat -4</p>
+                <p style="color: #ef4444;">🚨 Fast Filling: Just 4 seats left</p>
             </div>
             <div class="pur">
                 <input type="button" id="purchase" value="Purchase">
-                <input type="button" id="close" value="Close">
-
+                <input type="button" id="close" value="Dismiss">
             </div>
-
         </div>
 
-
-
-
-
-
-        <div class="main-box">
+        <!-- Maldives -->
+        <div class="main-box" data-category="beaches" data-price="90000" data-seats="40">
             <div class="img">
-                <img id="img1"
-                    src="https://t3.ftcdn.net/jpg/01/11/28/88/360_F_111288833_YIh3Br4p3lzSlFjDutcVIjJMj9EkWlKv.jpg"
-                    alt="maldivs">
+                <img id="img1" src="/images/maldives.jpg" alt="Maldives Overwater Villas">
+                <div class="card-badge">💎 Luxury Escape</div>
             </div>
             <div class="tit">
                 <span>Maldives</span>
@@ -116,28 +132,22 @@
                 <p>90,000 ₹</p>
             </div>
             <div class="des">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet debitis illo et provident,
-                    fuga
-                    in, quia voluptate cum suscipit quas eos ipsum.</p>
+                <p>Indulge in overwater private villas, crystal clear turquoise lagoons, and world-class coral reef scuba diving.</p>
             </div>
             <div class="ava">
-                <p>Available Seat -40</p>
+                <p>⚡ Available Seats: 40</p>
             </div>
             <div class="pur">
                 <input type="button" id="purchase" value="Purchase">
-                <input type="button" id="close" value="Close">
-
+                <input type="button" id="close" value="Dismiss">
             </div>
-
         </div>
 
-
-
-        <div class="main-box">
+        <!-- Bali -->
+        <div class="main-box" data-category="beaches" data-price="120000" data-seats="40">
             <div class="img">
-                <img id="img1"
-                    src="https://media.istockphoto.com/id/675172642/photo/pura-ulun-danu-bratan-temple-in-bali.jpg?s=612x612&w=0&k=20&c=_MPdmDviIyhldqhf7t6s63C-bZbTGfNHMlJP9SIa8Y0="
-                    alt="bali">
+                <img id="img1" src="/images/bali.jpg" alt="Bali Temple Water">
+                <div class="card-badge">⭐ Best Value</div>
             </div>
             <div class="tit">
                 <span>Bali</span>
@@ -147,26 +157,22 @@
                 <p>1,20,000 ₹</p>
             </div>
             <div class="des">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet debitis illo et provident,
-                    fuga
-                    in, quia voluptate cum suscipit quas eos ipsum.</p>
+                <p>Immerse yourself in lush Ubud rice terraces, iconic cliffside temples, spiritual retreats, and tropical beach havens.</p>
             </div>
             <div class="ava">
-                <p>Available Seat -40</p>
+                <p>⚡ Available Seats: 40</p>
             </div>
             <div class="pur">
                 <input type="button" id="purchase" value="Purchase">
-                <input type="button" id="close" value="Close">
-
+                <input type="button" id="close" value="Dismiss">
             </div>
-
         </div>
 
-        <div class="main-box">
+        <!-- Dubai -->
+        <div class="main-box" data-category="city" data-price="270000" data-seats="37">
             <div class="img">
-                <img id="img1"
-                    src="https://thumbs.dreamstime.com/b/dubai-marina-beauty-view-rooftop-showing-cityscape-boats-sea-view-51444879.jpg"
-                    alt="dubai">
+                <img id="img1" src="/images/dubai.jpg" alt="Dubai Skyscraper Marina">
+                <div class="card-badge">✨ Ultra Premium</div>
             </div>
             <div class="tit">
                 <span>Dubai</span>
@@ -176,28 +182,22 @@
                 <p>2,70,000 ₹</p>
             </div>
             <div class="des">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet debitis illo et provident,
-                    fuga
-                    in, quia voluptate cum suscipit quas eos ipsum.</p>
+                <p>Marvel at futuristic skyscrapers, desert dune bashing safaris, lavish shopping malls, and world-beating luxury marvels.</p>
             </div>
             <div class="ava">
-                <p>Available Seat -37</p>
+                <p>⚡ Available Seats: 37</p>
             </div>
             <div class="pur">
                 <input type="button" id="purchase" value="Purchase">
-                <input type="button" id="close" value="Close">
-
+                <input type="button" id="close" value="Dismiss">
             </div>
-
         </div>
 
-
-
-        <div class="main-box">
+        <!-- Singapore -->
+        <div class="main-box" data-category="city" data-price="290000" data-seats="56">
             <div class="img">
-                <img id="img1"
-                    src="https://media.istockphoto.com/id/590050726/photo/singapore-glowing-at-night.jpg?s=612x612&w=0&k=20&c=43tSsy1yC0iOAGL3ZVq3-nl84KnmWTnHGI5mwQtp8zo="
-                    alt="singapur">
+                <img id="img1" src="/images/singapore.jpg" alt="Singapore Night Skyline">
+                <div class="card-badge">🌿 Garden Metropolis</div>
             </div>
             <div class="tit">
                 <span>Singapore</span>
@@ -207,28 +207,22 @@
                 <p>2,90,000 ₹</p>
             </div>
             <div class="des">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet debitis illo et provident,
-                    fuga
-                    in, quia voluptate cum suscipit quas eos ipsum.</p>
+                <p>Explore futuristic supertrees at Gardens by the Bay, thrilling Universal Studios, and immaculate multicultural street food heavens.</p>
             </div>
             <div class="ava">
-                <p>Available Seat -56</p>
+                <p>⚡ Available Seats: 56</p>
             </div>
             <div class="pur">
                 <input type="button" id="purchase" value="Purchase">
-                <input type="button" id="close" value="Close">
-
+                <input type="button" id="close" value="Dismiss">
             </div>
-
         </div>
 
-
-
-        <div class="main-box">
+        <!-- Disneyland Hong Kong -->
+        <div class="main-box" data-category="family" data-price="160000" data-seats="56">
             <div class="img">
-                <img id="img1"
-                    src="https://www.discoverhongkong.com/content/dam/dhk/intl/explore/attractions/the-ultimate-guide-to-hong-kong-disneyland/ultimate-guide-to-hong-kong-disneyland-1920x1080.jpg"
-                    alt="disneyland">
+                <img id="img1" src="/images/disneyland.jpg" alt="Disneyland Castle">
+                <div class="card-badge">🏰 Family Favorite</div>
             </div>
             <div class="tit">
                 <span>Disneyland</span>
@@ -238,25 +232,22 @@
                 <p>1,60,000 ₹</p>
             </div>
             <div class="des">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet debitis illo et provident,
-                    fuga
-                    in, quia voluptate cum suscipit quas eos ipsum.</p>
+                <p>Step into magical fairy tales, exhilarating Disney attractions, spectacular fireworks, and unforgettable character encounters.</p>
             </div>
             <div class="ava">
-                <p>Available Seat -56</p>
+                <p>⚡ Available Seats: 56</p>
             </div>
             <div class="pur">
                 <input type="button" id="purchase" value="Purchase">
-                <input type="button" id="close" value="Close">
-
+                <input type="button" id="close" value="Dismiss">
             </div>
-
         </div>
 
-        <div class="main-box">
+        <!-- London -->
+        <div class="main-box" data-category="city" data-price="164000" data-seats="45">
             <div class="img">
-                <img id="img1" src="https://static.wanderon.in/wp-content/uploads/2024/05/travel-tips-london.jpg"
-                    alt="london">
+                <img id="img1" src="/images/london.jpg" alt="London Big Ben bridge">
+                <div class="card-badge">👑 Royal Heritage</div>
             </div>
             <div class="tit">
                 <span>London</span>
@@ -266,77 +257,174 @@
                 <p>1,64,000 ₹</p>
             </div>
             <div class="des">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet debitis illo et provident,
-                    fuga
-                    in, quia voluptate cum suscipit quas eos ipsum.</p>
+                <p>Discover majestic royal palaces, iconic Big Ben, West End theater shows, and rich historic museums across the River Thames.</p>
             </div>
             <div class="ava">
-                <p>Available Seat -45</p>
+                <p>⚡ Available Seats: 45</p>
             </div>
             <div class="pur">
                 <input type="button" id="purchase" value="Purchase">
-                <input type="button" id="close" value="Close">
-
+                <input type="button" id="close" value="Dismiss">
             </div>
+        </div>
+    </main>
 
+    <!-- Verified Traveler Reviews Section -->
+    <section class="testimonials-section">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 800; margin-bottom: 8px;">Loved by Travelers Worldwide</h2>
+        <p style="color: var(--text-secondary);">Real reviews from guests who booked their dream getaways through TravelGo</p>
+        
+        <div class="test-grid">
+            <div class="test-card">
+                <div class="test-rating">★★★★★</div>
+                <p class="test-text">"Our Bali vacation was perfectly executed! From the private pool villa in Ubud to the sunset seafood dinner in Jimbaran, TravelGo made every moment stress-free."</p>
+                <p class="test-author">— Rohan & Priya Sharma, Mumbai</p>
+            </div>
+            <div class="test-card">
+                <div class="test-rating">★★★★★</div>
+                <p class="test-text">"Booked the Dubai luxury escape package for our anniversary. The Burj Khalifa VIP pass and private desert yacht safari exceeded all expectations!"</p>
+                <p class="test-author">— Vikram Aditya, Bangalore</p>
+            </div>
+            <div class="test-card">
+                <div class="test-rating">★★★★★</div>
+                <p class="test-text">"Seamless itinerary design and instant responsive support. The Kullu Manali adventure tour had the best hotels and driver we could ask for."</p>
+                <p class="test-author">— Sneha K., New Delhi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="info">
+            <div class="a">
+                <span>TravelGo</span>
+                <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 14px;">Your ultimate luxury travel companion developed by Nidhi Mehta.</p>
+                <ul>
+                    <li><a href="about.html">About Developer</a></li>
+                    <li><a href="form.html">Customer Care</a></li>
+                    <li><a href="#">Privacy & Security</a></li>
+                </ul>
+            </div>
+            <div class="b">
+                <span>Top Destinations</span>
+                <ul>
+                    <li><a href="#">Bali & Maldives</a></li>
+                    <li><a href="#">Europe Escapes</a></li>
+                    <li><a href="#">Dubai Luxury Tours</a></li>
+                    <li><a href="#">Himalayan Expeditions</a></li>
+                </ul>
+            </div>
+            <div class="c">
+                <span>Portfolio Showcase</span>
+                <ul>
+                    <li><a href="https://github.com/nidhieeeee" target="_blank">GitHub Projects</a></li>
+                    <li><a href="https://www.linkedin.com/in/nidhi-mehta-89340b2b2" target="_blank">LinkedIn Profile</a></li>
+                    <li><a href="form.html">Hire Nidhi Mehta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="last">
+            <div class="term">
+                <p>© 2026 TravelGo. Designed & Engineered by Nidhi Mehta.</p>
+            </div>
+            <div class="privacy">
+                <p>TERMS OF SERVICE • PRIVACY POLICY</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Backdrop -->
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+
+    <!-- Destination Details & Itinerary Modal -->
+    <div class="custom-modal" id="details-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-header">
+            <div>
+                <h2 class="modal-title" id="modal-title">Destination Title</h2>
+                <p id="modal-rating" style="color: #f59e0b; font-weight: 600; margin-top: 4px;">★ 4.9 (Verified Reviews)</p>
+            </div>
+            <button class="modal-close-btn" aria-label="Close dialog">✕</button>
         </div>
 
+        <img id="modal-img" class="modal-banner" src="" alt="Destination Banner">
 
+        <p id="modal-desc" style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 20px;"></p>
 
+        <div style="margin-bottom: 24px;">
+            <h4 style="font-family: 'Outfit', sans-serif; margin-bottom: 10px;">Included Amenities & Perks:</h4>
+            <div id="modal-inclusions"></div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+            <h4 style="font-family: 'Outfit', sans-serif; margin-bottom: 14px;">Curated Day-by-Day Itinerary:</h4>
+            <div id="modal-itinerary"></div>
+        </div>
+
+        <!-- Interactive Price Calculation Engine -->
+        <div class="price-calc-box">
+            <div>
+                <span style="font-size: 0.85rem; color: var(--text-secondary); display: block;">Number of Travelers</span>
+                <div class="counter-btns" style="margin-top: 6px;">
+                    <button type="button" id="btn-minus" aria-label="Decrease travelers">−</button>
+                    <span id="traveler-count" style="font-weight: 800; font-size: 1.2rem; min-width: 24px; text-align: center;">2</span>
+                    <button type="button" id="btn-plus" aria-label="Increase travelers">+</button>
+                </div>
+            </div>
+
+            <div style="text-align: right;">
+                <span style="font-size: 0.85rem; color: var(--text-secondary); display: block;">Total Calculated Price</span>
+                <span id="modal-total-price" style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--accent-blue);">1,00,000 ₹</span>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+            <span id="modal-seats" style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">⚡ Available Seats: 40</span>
+            <button type="button" id="modal-book-now" style="background: var(--accent-gradient); color: white; border: none; padding: 14px 28px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; cursor: pointer; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);">Proceed to Booking →</button>
+        </div>
     </div>
 
+    <!-- Quick Booking & Checkout Modal -->
+    <div class="custom-modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="book-dest-title">
+        <div class="modal-header">
+            <div>
+                <h2 class="modal-title" style="font-size: 1.5rem;">Express Booking Checkout</h2>
+                <p id="book-dest-title" style="color: var(--accent-blue); font-weight: 700; margin-top: 2px;">Holiday Package</p>
+            </div>
+            <button class="modal-close-btn" aria-label="Close dialog">✕</button>
+        </div>
 
-    <div class="footer">
-        <div class="info">
-<div class="a">
-    <span>TravelGo</span>
-        
-    <ul>
-        <li><a href="about.html">ABOUT</a></li>
-        <li>CAREERS</li>
-        <li>PRIVACY & SECURITY</li>
-    </ul>
-</div>
-<div class="b">
-    <span>Resource</span>
-    <ul>
-        
-        <li>Support</li>
-        <li>How to</li>
-        <li>Blog</li>
-    </ul>
-</div>
-<div class="c">
-    <span>Product</span>
-    <ul>
-        
-        <li>Create Simple Bots</li>
-        <li>AI Based Bots</li>
-        <li>Pricing</li>
-    </ul>
-</div>
-</div>
-<div class="last">
-    <div class="year">
-        <p>@2024, TravelGo</p>
+        <div style="background: var(--bg-secondary); padding: 14px 18px; border-radius: 12px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 600; color: var(--text-secondary);">Total Investment:</span>
+            <span id="book-price-display" style="font-weight: 800; font-size: 1.3rem; color: var(--text-primary);">50,000 ₹</span>
+        </div>
+
+        <form id="quick-booking-form">
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">Lead Traveler Name *</label>
+                <input type="text" required placeholder="Full Legal Name" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary);">
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">Email Address for Itinerary *</label>
+                <input type="email" required placeholder="traveler@example.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary);">
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">Preferred Departure Date *</label>
+                <input type="date" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary);">
+            </div>
+
+            <div style="margin-bottom: 24px;">
+                <label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">Special Requests / Customizations (Optional)</label>
+                <textarea rows="3" placeholder="Dietary preferences, airport pick-up notes..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary); resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" style="width: 100%; background: var(--accent-gradient); color: white; border: none; padding: 14px; border-radius: 10px; font-weight: 700; font-size: 1.05rem; cursor: pointer; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);">Confirm & Pay Securely</button>
+        </form>
     </div>
-    <div class="privacy">
-        <p>PRIVACY POLICY</p>
-    </div>
-    <div class="term">
-        <p>TERMS OF SERVICE</p>
-    </div>
-    </div>
-    
-</div>
-    <script>
-    document.getElementById('hamburger').addEventListener('click', ()=>{
-      var menu=document.getElementById('navbar-menu').querySelector('ul');
-      menu.classList.toggle('active');
-      var hamburger=document.getElementById('hamburger');
-      hamburger.classList.toggle('active');
-      
-    })
-</script>
+
+    <!-- Application Script Engine -->
+    <script src="app.js"></script>
 </body>
+
 </html>

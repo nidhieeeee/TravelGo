@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About TravelGo</title>
+    <title>About TravelGo & Developer Nidhi Mehta</title>
+    <meta name="description" content="Learn more about TravelGo, a professional resume portfolio web application engineered by Nidhi Mehta.">
     <link rel="stylesheet" href="styleabout.css">
 </head>
 
 <body>
-    <div class="navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
         <div class="header">
             <header>TravelGo</header>
         </div>
@@ -17,69 +19,78 @@
         <div class="hacp" id="navbar-menu">
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li> <a href="form.html">CONTACT US</a> </li>
-                <li>PRICING</li>
+                <li><a href="about.html" style="color: var(--accent-blue);">ABOUT</a></li>
+                <li><a href="form.html">CONTACT US</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙 <span>Dark Mode</span></button></li>
             </ul>
         </div>
+
         <div class="button">
-            <input type="button" id="get" value="Get Started">
+            <input type="button" id="get" value="Explore Trips" onclick="window.location.href='index.html'">
             <input type="button" id="sign" value="SIGN IN">
         </div>
 
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
-    </div>
+    </nav>
 
+    <div class="about-wrapper">
+        <div class="main1">
+            <h1 class="tit">About The Project</h1>
+            <p class="subtitle">Architecting modern travel web experiences with clean engineering & stunning UI/UX</p>
+            <div class="underline"></div>
 
-    <div class="main1">
-        <div class="tit">
-            <h1>About</h1>
-        </div>
-        <div class="underline"></div>
-        <div class="main">
-            <div class="p-img">
-                <div class="des">
-                    <p>Welcome to TravelGo, yout ultimate travel companion! TravelGo, developed by Nidhi Mehta, is
-                        designed to simplify and enhance yout travel planning and experiences. Whether you're booking
-                        flights, finding accommodations, or exploring new destinations. TravelGo has got you covered.
-                    </p>
-                    <p>
-                        For more about the project, visit our <a href="https://github.com/nidhieeeee">GitHub</a> page.
-                        Connect with Nidhi Mehta on <a
-                            href="https://www.linkedin.com/in/nidhi-mehta-89340b2b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>.
-                    </p>
-                    <div class="icon1">
-                        <img src="openmoji--linkedin.png" id="icon">
-                        <a href="https://www.linkedin.com/in/nidhi-mehta-89340b2b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                            class="a">Nidhi Mehta</a>
-                    </div>
+            <div class="main">
+                <div class="p-img">
+                    <div class="des">
+                        <p>Welcome to <strong>TravelGo</strong>, your ultimate luxury travel companion! Developed and engineered by <strong>Nidhi Mehta</strong>, this frontend web application is designed to simplify and elevate the vacation planning journey.</p>
+                        <p>Featuring real-time dynamic search, category filtering, interactive day-by-day itinerary previews, state-driven price calculation, and seamless dark mode theming, TravelGo reflects state-of-the-art web development standards.</p>
 
-                    <div class="icon1">
-                        <img src="openmoji--github.png" alt="githublogo" id="icon">
-                        <a href="https://github.com/nidhieeeee" class="a">nidhieeeee</a>
+                        <div class="tech-badges">
+                            <span class="tech-badge">⚡ Pure JavaScript ES6+</span>
+                            <span class="tech-badge">🎨 Modern CSS Variables</span>
+                            <span class="tech-badge">📱 Responsive UI/UX</span>
+                            <span class="tech-badge">✨ Glassmorphism</span>
+                        </div>
+
+                        <p>Connect with Nidhi Mehta or explore the source repository below:</p>
+
+                        <div class="icon1">
+                            <img src="/images/openmoji--github.png" alt="LinkedIn Logo" id="icon">
+                            <div>
+                                <a href="https://www.linkedin.com/in/nidhi-mehta-89340b2b2" target="_blank" class="a">Nidhi Mehta</a>
+                                <span style="display: block; font-size: 0.82rem; color: var(--text-secondary);">Connect on LinkedIn</span>
+                            </div>
+                        </div>
+
+                        <div class="icon1">
+                            <img src="/images/openmoji--linkedin.png" alt="GitHub Logo" id="icon">
+                            <div>
+                                <a href="https://github.com/nidhieeeee" target="_blank" class="a">nidhieeeee</a>
+                                <span style="display: block; font-size: 0.82rem; color: var(--text-secondary);">View GitHub Portfolio</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="img">
-                <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="planeohoto">
+
+                <div class="img">
+                    <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Airplane soaring in sky">
+                </div>
             </div>
         </div>
     </div>
-    </div>
-    <script>
-        document.getElementById('hamburger').addEventListener('click', () => {
-            var menu = document.getElementById('navbar-menu').querySelector('ul');
-            menu.classList.toggle('active');
-            var hamburger = document.getElementById('hamburger');
-            hamburger.classList.toggle('active');
 
-        })
-    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="last">
+            <p>© 2026 TravelGo. Engineered with ❤️ by Nidhi Mehta for Professional Resume Showcase.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

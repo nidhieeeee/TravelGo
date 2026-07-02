@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
+    <title>Contact TravelGo & Nidhi Mehta</title>
+    <meta name="description" content="Get in touch with TravelGo for personalized travel itineraries, customer care, or portfolio inquiries with engineer Nidhi Mehta.">
     <link rel="stylesheet" href="styleform.css">
 </head>
 
 <body>
-    <div class="navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
         <div class="header">
             <header>TravelGo</header>
         </div>
@@ -18,53 +20,75 @@
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li> <a href="form.html">CONTACT US</a> </li>
-                <li>PRICING</li>
+                <li><a href="form.html" style="color: var(--accent-blue);">CONTACT US</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙 <span>Dark Mode</span></button></li>
             </ul>
         </div>
+
         <div class="button">
-            <input type="button" id="get" value="Get Started">
+            <input type="button" id="get" value="Explore Trips" onclick="window.location.href='index.html'">
             <input type="button" id="sign" value="SIGN IN">
         </div>
 
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
-    </div>
-    <div class="contact-container">
-        <p>We'd love to hear from you!</p>
-        <form>
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <p>Email: nidhimehta0303@gmail.com</p>
-            <p>Phone: +91 1234567890</p>
-            <p>Address: 123 TravelGo Lane, Imaginary City, Adventureland</p>
-        </div>
-    </div>
-    <script>
-        document.getElementById('hamburger').addEventListener('click', () => {
-            var menu = document.getElementById('navbar-menu').querySelector('ul');
-            menu.classList.toggle('active');
-            var hamburger = document.getElementById('hamburger');
-            hamburger.classList.toggle('active');
+    </nav>
 
-        })
-    </script>
+    <div class="form-wrapper">
+        <div class="contact-container">
+            <h1 class="contact-title">Let's Connect</h1>
+            <p class="contact-subtitle">We'd love to hear from you! Send us your travel questions or project inquiries.</p>
+
+            <form novalidate>
+                <div class="form-group">
+                    <label for="name">Full Legal Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message / Itinerary Inquiry *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your dream destination, travel dates, or project questions..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message →</button>
+            </form>
+
+            <div class="contact-info-cards">
+                <div class="info-box">
+                    <div class="info-icon">📧</div>
+                    <div class="info-label">Email Developer</div>
+                    <div class="info-val">nidhimehta0303@gmail.com</div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-icon">📞</div>
+                    <div class="info-label">Direct Phone</div>
+                    <div class="info-val">+91 12345 67890</div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-icon">📍</div>
+                    <div class="info-label">Headquarters</div>
+                    <div class="info-val">TravelGo Studio, India</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 TravelGo. Developed by Nidhi Mehta for Professional Resume Showcase.</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
